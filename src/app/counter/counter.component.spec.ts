@@ -8,9 +8,9 @@ describe('CounterComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ CounterComponent ]
+      declarations: [CounterComponent]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {
@@ -21,5 +21,15 @@ describe('CounterComponent', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('should increase count when call increase', () => {
+    component.increase();
+    expect(1).toBe(component.account);
+  });
+
+  it('should increase count when call increase', () => {
+    component.decrease();
+    expect(-1).toBe(component.account);
   });
 });

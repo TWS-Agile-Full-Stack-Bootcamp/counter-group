@@ -12,10 +12,10 @@ export class CounterComponent implements OnInit {
   public account: number;
 
   public increase() {
-this.account++;
+    this.account++;
   }
 
-  public decrease(){
+  public decrease() {
     this.account--;
   }
 
