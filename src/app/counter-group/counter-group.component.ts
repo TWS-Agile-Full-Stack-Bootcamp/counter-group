@@ -10,10 +10,14 @@ export class CounterGroupComponent implements OnInit {
 
   constructor() { }
 
-  public counter: Counter;
+  public counters: Array<Counter>
 
   ngOnInit(): void {
-    this.counter = new Counter();
+    this.counters = new Array<Counter>();
+    this.counters.push(new Counter());
+    this.counters.push(new Counter());
+    this.counters.push(new Counter());
+    this.counters.push(new Counter());
   }
 
 }
