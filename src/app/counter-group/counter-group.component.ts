@@ -12,6 +12,12 @@ export class CounterGroupComponent implements OnInit {
 
   public counters: Array<Counter>
 
+  public get sum(): number {
+    return this.counters.reduce((pre, current) =>{
+      return pre + current.acount;
+    }, 0);
+  }
+
   ngOnInit(): void {
     this.counters = new Array<Counter>();
     this.counters.push(new Counter());
