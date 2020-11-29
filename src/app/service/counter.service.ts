@@ -19,7 +19,7 @@ export class CounterService {
     return this.counterStore;
   }
 
-  public get Total(): number {
+  public get total(): number {
     return this.counterStore.reduce((pre, current) => {
       return pre + current.acount;
     }, 0);

@@ -13,4 +13,11 @@ describe('CounterService', () => {
   it('should be created', () => {
     expect(service).toBeTruthy();
   });
+
+  it('should get counter total', ()=>{
+    service.counters[0].increase();
+
+    expect(1).toBe(service.total);
+  });
+
 });
